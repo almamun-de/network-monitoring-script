@@ -23,3 +23,9 @@ def monitor_hosts(hosts, interval, log_file):
                 log.write(log_entry)
             time.sleep(interval)
 
+if __name__ == "__main__":
+    hosts = ["8.8.8.8", "google.com", "192.168.1.1"]  # Add the IP addresses or URLs you want to monitor
+    interval = 60  # Time between checks in seconds
+    log_file = "network_monitor_log.txt"  # Log file to save the monitoring results
+
+    monitor_hosts(hosts, interval, log_file)
